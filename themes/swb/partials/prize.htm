@@ -1,0 +1,19 @@
+[builderList giftsList]
+modelClass = "Swb\Admin\Models\Gift"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set gifts = giftsList.records %}
+<div class="prize__wrap">
+    <div class="slider partnersPrizeSlider">
+        {% for gift in gifts %}
+            <div><img src="{{ gift.logo_gift.path }}" alt="" /></div>
+        {% endfor %}
+    </div>
+    <div class="partnersSliderArrow"></div>
+</div>

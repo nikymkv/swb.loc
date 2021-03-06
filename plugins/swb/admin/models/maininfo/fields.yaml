@@ -1,0 +1,54 @@
+fields:
+    block_winners:
+        label: 'Открыть блок победителей'
+        span: auto
+        type: checkbox
+    block_class:
+        label: 'Класс для активации блока'
+        span: right
+        type: text
+tabs:
+    fields:
+        quote:
+            label: Цитата
+            span: left
+            type: text
+            tab: Шапка
+        quote_author:
+            label: 'Автор цитаты'
+            span: right
+            type: text
+            tab: Шапка
+        description:
+            label: Описание
+            size: ''
+            span: left
+            type: richeditor
+            tab: Шапка
+        interesting_title1:
+            label: 'Заголовок левой записи'
+            span: left
+            type: text
+            tab: 'Кому интересно'
+        interesting_title2:
+            label: 'Заголовок правой записи'
+            span: right
+            type: text
+            tab: 'Кому интересно'
+        interesting_desc1:
+            label: 'Описание левой записи'
+            size: ''
+            span: left
+            type: richeditor
+            tab: 'Кому интересно'
+        interesting_desc2:
+            label: 'Описание правой записи'
+            size: ''
+            span: right
+            type: richeditor
+            tab: 'Кому интересно'
+        feedback_title:
+            label: 'Заголовок обратной формы'
+            span: left
+            type: text
+            tab: 'Обратная форма'

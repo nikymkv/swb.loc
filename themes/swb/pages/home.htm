@@ -1,0 +1,144 @@
+title = "SWB"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[builderList conditionList]
+modelClass = "Swb\Admin\Models\Condition"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "location"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList mainInfoList]
+modelClass = "Swb\Admin\Models\MainInfo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "quote"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList partnersList]
+modelClass = "Swb\Admin\Models\Partner"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set condition = conditionList.records[0] %}
+{% set mainInfo = mainInfoList.records[0] %}
+{% set partners = partnersList.records %}
+<section class="condition">
+<div class="parallax background-tree" id="Paralax__img_condition">
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title_light.png'|theme }}" alt="" class="paraxImgMobil" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title_light.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
+</div>
+
+<div class="condition__wrap">
+    <div class="cw__title">
+        <p>
+            проект проводится в <a href="{{ condition.location }}">instagram</a>
+            <a href="{{ condition.location }}" class="instHref" target="_blanc"><img src="{{ 'assets/img/condition_inst_title.svg'|theme }}" alt=""/></a>
+        </p>
+    </div>
+    <div class="cw__content__img">
+        {% for img in condition.gallery %}
+            <img src="{{ img.path }}" alt="" />
+        {% endfor %}
+    </div>
+    <div class="cw__content__img__mobil">
+        <div class="slider condition_mobil">
+            {% for img in condition.gallery_mobile %}
+            <img src="{{ img.path }}" alt="" />
+        {% endfor %}
+        </div>
+    </div>
+    <div class="cw__rule">
+        <a href="{{ condition.rules.path }}" target="_blank"><span>ознакомьтесь</span>
+            <p>с общими правилами проекта</p>
+        </a>
+    </div>
+    <div class="cw__whoInterested">
+        <p class="cww__title">кому это интересно</p>
+        <div class="cww__block__wrap">
+            <div class="cww__block">
+                <p>{{ mainInfo.interesting_title1 }}</p>
+                <span>{{ mainInfo.interesting_desc1|replace({'<p>':'','</p>':''})|raw }}</span>
+
+            </div>
+            <div class="cww__block cww__blockBlue">
+                <p>{{ mainInfo.interesting_title2 }}</p>
+                <span>{{ mainInfo.interesting_desc2|replace({'<p>':'','</p>':''})|raw }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax ParalaxConditionBottom background-tree" id="Paralax__img_condition_bottom">
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners__light.png'|theme }}" alt="" class="paraxImgMobil" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners__light.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/partners.png'|theme }}" alt="" />
+</div>
+</section>
+
+<section class="partners">
+    <div class="slider partnersSlider">
+        {% for p in partners %}
+            <a href="{{ p.url }}"><img src="{{ p.logo_partner.path }}" alt="" /></a>
+        {% endfor %}
+    </div>
+    <div class="partnersSliderArrow"></div>
+</section>
+
+<section class="about">
+    {% partial 'about' %}
+</section>
+
+<div class="title">
+    <div class="title__wrap">
+        <span>призы от</span>
+        <p>партнеров</p>
+    </div>
+</div>
+
+<section class="prize">
+    {% partial 'prize' %}
+</section>
+<section class="winner {{ (mainInfo.block_winners) == (0) ? mainInfo.block_class : '' }}">
+    <div class="title">
+        <div class="title__wrap">
+            <span>победители</span>
+            <p>розыгрыша</p>
+        </div>
+    </div>
+    {% partial 'winners' %}
+</section>

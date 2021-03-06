@@ -1,0 +1,11 @@
+name: AboutController
+modelClass: Swb\Admin\Models\About
+form: $/swb/admin/models/about/fields.yaml
+defaultRedirect: swb/admin/aboutcontroller
+create:
+    redirect: 'swb/admin/aboutcontroller/update/:id'
+    redirectClose: swb/admin/aboutcontroller
+update:
+    redirect: swb/admin/aboutcontroller
+    redirectClose: swb/admin/aboutcontroller
+preview: {  }

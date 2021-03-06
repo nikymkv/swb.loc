@@ -1,0 +1,12 @@
+title: GiftController
+modelClass: Swb\Admin\Models\Gift
+list: $/swb/admin/models/gift/columns.yaml
+recordUrl: 'swb/admin/giftcontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

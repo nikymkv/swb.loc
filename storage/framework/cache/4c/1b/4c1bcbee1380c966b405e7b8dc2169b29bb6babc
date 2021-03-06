@@ -1,0 +1,95 @@
+1615048513a:1:{s:9:"about.htm";a:6:{s:8:"fileName";s:9:"about.htm";s:7:"content";s:2125:"[builderList aboutList]
+modelClass = "Swb\Admin\Models\About"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "url_random"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set about = aboutList.records[0] %}
+<div class="parallax background-tree" id="Paralax__img_about">
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/aboutLight.png'|theme }}" alt="" class="paraxImgMobil" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/aboutLight.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+</div>
+<div class="about__draw">
+    <div class="ad__wrap">
+        <div class="adw__block abw__draw">
+            <p>розыгрыш</p>
+            <span>призов</span>
+        </div>
+        <div class="adw__count">
+            <div class="adw__block adw__counts">
+                <p>{{ about.left_digit }}</p>
+                <span>раз</span>
+            </div>
+            <span class="adw__count__middle">в</span>
+            <div class="adw__block adw__month">
+                <p>{{ about.right_digit }}</p>
+                <span>{{месяца}}</span>
+            </div>
+        </div>
+        <div class="adw__block adw__live">
+            <p>в прямом эфире</p>
+            <span>с помощью сервиса <a href="{{ about.url_random }}">рандомайзер</a></span>
+        </div>
+    </div>
+    <div class="ad__draw__right">
+        <div class="adr_wrap">
+            <p>{{ about.duration }}</p>
+            <span>{{ about.text_duration }}</span>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1615041064;s:6:"markup";s:1871:"{% set about = aboutList.records[0] %}
+<div class="parallax background-tree" id="Paralax__img_about">
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/aboutLight.png'|theme }}" alt="" class="paraxImgMobil" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/aboutLight.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+</div>
+<div class="about__draw">
+    <div class="ad__wrap">
+        <div class="adw__block abw__draw">
+            <p>розыгрыш</p>
+            <span>призов</span>
+        </div>
+        <div class="adw__count">
+            <div class="adw__block adw__counts">
+                <p>{{ about.left_digit }}</p>
+                <span>раз</span>
+            </div>
+            <span class="adw__count__middle">в</span>
+            <div class="adw__block adw__month">
+                <p>{{ about.right_digit }}</p>
+                <span>{{месяца}}</span>
+            </div>
+        </div>
+        <div class="adw__block adw__live">
+            <p>в прямом эфире</p>
+            <span>с помощью сервиса <a href="{{ about.url_random }}">рандомайзер</a></span>
+        </div>
+    </div>
+    <div class="ad__draw__right">
+        <div class="adr_wrap">
+            <p>{{ about.duration }}</p>
+            <span>{{ about.text_duration }}</span>
+        </div>
+    </div>
+</div>";s:4:"code";N;s:21:"builderList aboutList";a:8:{s:10:"modelClass";s:22:"Swb\Admin\Models\About";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:10:"url_random";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

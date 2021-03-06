@@ -1,0 +1,65 @@
+[builderList mainInfoList]
+modelClass = "Swb\Admin\Models\MainInfo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "quote"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set mainInfo = mainInfoList.records[0] %}
+<div class="parallax background-tree" id="Paralax__img">
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+</div>
+<div class="header_mobil">
+  <img src="{{ 'assets/img/swb.svg'|theme }}" alt="" />
+  <img src="{{ 'assets/img/navImg.svg'|theme }}" alt="" class="navImg" />
+</div>
+<div class="main">
+  <div class="main__text">
+    <div class="mt__title">
+      <p>{{ mainInfo.quote }}</p>
+    </div>
+    <div class="mt__autor">
+      <p>-{{ mainInfo.quote_author }}</p>
+    </div>
+    <div class="mt__text">
+        {{ mainInfo.description|raw }}
+    </div>
+    <div class="mt__button">
+      <div class="mtb__wrap">
+        <label>присоединиться</label>
+      </div>
+    </div>
+  </div>
+</div>
+<img src="{{ 'assets/img/main_bg.png'|theme }}" class="mainBG" alt="" />
+<div class="mobilBottomLine"></div>
+<div class="mobilNav">
+  <ul>
+    <li class="conditionNav"><p>условия</p></li>
+    <li class="partnersNav"><p>о партнерах</p></li>
+    <li class="aboutNav"><p>о проекте</p></li>
+    <li class="winnerNav"><p>победители</p></li>
+    <li class="feedbackNav"><p class="navWhite">связаться с нами</p></li>
+    <img src="{{ 'assets/img/mobilCross.svg'|theme }}" alt="" class="navCross" />
+  </ul>
+</div>

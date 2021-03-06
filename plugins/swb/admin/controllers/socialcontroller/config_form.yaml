@@ -1,0 +1,11 @@
+name: SocialController
+modelClass: Swb\Admin\Models\Social
+form: $/swb/admin/models/social/fields.yaml
+defaultRedirect: swb/admin/socialcontroller
+create:
+    redirect: 'swb/admin/socialcontroller/update/:id'
+    redirectClose: swb/admin/socialcontroller
+update:
+    redirect: swb/admin/socialcontroller
+    redirectClose: swb/admin/socialcontroller
+preview: {  }

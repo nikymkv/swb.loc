@@ -1,0 +1,53 @@
+[builderList aboutList]
+modelClass = "Swb\Admin\Models\About"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "url_random"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set about = aboutList.records[0] %}
+<div class="parallax background-tree" id="Paralax__img_about">
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/aboutLight.png'|theme }}" alt="" class="paraxImgMobil" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/aboutLight.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+    <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
+</div>
+<div class="about__draw">
+    <div class="ad__wrap">
+        <div class="adw__block abw__draw">
+            <p>розыгрыш</p>
+            <span>призов</span>
+        </div>
+        <div class="adw__count">
+            <div class="adw__block adw__counts">
+                <p>{{ about.left_digit }}</p>
+                <span>раз</span>
+            </div>
+            <span class="adw__count__middle">в</span>
+            <div class="adw__block adw__month">
+                <p>{{ about.right_digit }}</p>
+                <span>{{месяца}}</span>
+            </div>
+        </div>
+        <div class="adw__block adw__live">
+            <p>в прямом эфире</p>
+            <span>с помощью сервиса <a href="{{ about.url_random }}">рандомайзер</a></span>
+        </div>
+    </div>
+    <div class="ad__draw__right">
+        <div class="adr_wrap">
+            <p>{{ about.duration }}</p>
+            <span>{{ about.text_duration }}</span>
+        </div>
+    </div>
+</div>

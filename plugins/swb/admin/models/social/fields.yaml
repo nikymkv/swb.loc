@@ -1,0 +1,19 @@
+fields:
+    name:
+        label: 'Название социальной сети'
+        span: left
+        type: text
+    url:
+        label: Ссылка
+        span: right
+        type: text
+    logo_social:
+        label: 'Изображение соц. сети'
+        mode: image
+        fileTypes: svg
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload

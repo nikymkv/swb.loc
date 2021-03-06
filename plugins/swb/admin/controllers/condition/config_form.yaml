@@ -1,0 +1,11 @@
+name: Condition
+modelClass: Swb\Admin\Models\Condition
+form: $/swb/admin/models/condition/fields.yaml
+defaultRedirect: swb/admin/condition
+create:
+    redirect: 'swb/admin/condition/update/:id'
+    redirectClose: swb/admin/condition
+update:
+    redirect: swb/admin/condition
+    redirectClose: swb/admin/condition
+preview: {  }

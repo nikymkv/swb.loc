@@ -1,0 +1,27 @@
+[builderList winnersList]
+modelClass = "Swb\Admin\Models\Winner"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set winners = winnersList.records %}
+<div class="winner__wrap">
+    <div class="slier winnerSlider">
+        {% for w in winners %}
+        <div>
+            <div class="winnerBlock">
+                <div class="winnerBlock__wrap">
+                    <div class="wbw_inst"><a href="{{ w.url_winner }}">{{ w.nickname }}</a></div>
+                    <p>{{ w.title }}</p>
+                    <a href="{{ w.by_url }}">{{ w.by_give }}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="partnersSliderArrow"></div>
+</div>

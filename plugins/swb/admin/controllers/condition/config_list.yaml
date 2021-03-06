@@ -1,0 +1,12 @@
+title: Condition
+modelClass: Swb\Admin\Models\Condition
+list: $/swb/admin/models/condition/columns.yaml
+recordUrl: 'swb/admin/condition/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

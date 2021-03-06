@@ -1,0 +1,21 @@
+fields:
+    nickname:
+        label: Никнейм
+        span: left
+        type: text
+    url_winner:
+        label: 'Ссылка на победителя'
+        span: auto
+        type: text
+    by_give:
+        label: 'От кого приз (имя)'
+        span: left
+        type: text
+    by_url:
+        label: 'От кого приз (ссылка)'
+        span: auto
+        type: text
+    title:
+        label: Заголовок
+        span: auto
+        type: text

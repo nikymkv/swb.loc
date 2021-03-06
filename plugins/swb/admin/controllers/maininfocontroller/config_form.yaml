@@ -1,0 +1,11 @@
+name: MainInfoController
+modelClass: Swb\Admin\Models\MainInfo
+form: $/swb/admin/models/maininfo/fields.yaml
+defaultRedirect: swb/admin/maininfocontroller
+create:
+    redirect: 'swb/admin/maininfocontroller/update/:id'
+    redirectClose: swb/admin/maininfocontroller
+update:
+    redirect: swb/admin/maininfocontroller
+    redirectClose: swb/admin/maininfocontroller
+preview: {  }

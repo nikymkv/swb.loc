@@ -1,0 +1,399 @@
+1615048375a:1:{s:11:"default.htm";a:9:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:6936:"description = "Default layout"
+
+[feedbackform]
+
+[builderList socialList]
+modelClass = "Swb\Admin\Models\Social"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList mainInfoList]
+modelClass = "Swb\Admin\Models\MainInfo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "feedback_title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set socials = socialList.records %}
+{% set mainInfo = mainInfoList.records[0] %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWB</title>
+    <link rel="stylesheet" href="{{ 'assets/css/ctyle.css'|theme }}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    {% styles %}
+  </head>
+  <body>
+    <section class="header">
+      {% partial 'site/header' %}
+    </section>
+
+      {% page %}
+
+    <section class="feedback">
+      <div class="parallax background-tree" id="Paralax__img__feedback">
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb.svg'|theme }}" alt="" class="paraxImgMobil" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+      </div>
+      <div class="feedback__wrap">
+        <div class="fw__title">
+          <p>{{ mainInfo.feedback_title }}</p>
+        </div>
+        <div class="fw__sn">
+          {% for s in socials %}
+            <a href="{{ s.url }}"><img src="{{ s.logo_social.path }}" alt="" /></a>
+          {% endfor %}
+        </div>
+        {% component 'feedbackform' %}
+      </div>
+      <div class="copyWrite">
+        <p>
+          © 2021 <a href="https://itd.company/" target="_blank">ITD Company</a>.
+          All rights reserved
+        </p>
+      </div>
+    </section>
+
+    <div class="scrollUP">
+      <img src="{{ 'assets/img/arrUP.svg'|theme }}" alt="" />
+    </div>
+
+    <div class="scrollBar"></div>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(".partnersSlider").slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: false,
+        draggable: false,
+        rows: 2,
+        swipe: false,
+        prevArrow:
+          "<button id='prev' type='button' class='btn btnPrev'><img src='{{ 'assets/img/partnersArrLeft.svg'|theme }}' alt=''></button>",
+        nextArrow:
+          "<button id='next' type='button' class='btn btnNext'><img src='{{ 'assets/img/partnersArrRight.svg'|theme }}' alt=''></button>",
+        responsive: [
+          {
+            breakpoint: 920,
+            settings: {
+              arrow: false,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false,
+              draggable: true,
+            },
+          },
+        ],
+      });
+    </script>
+    <script>
+      $(".partnersPrizeSlider").slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: false,
+        draggable: false,
+        rows: 1,
+        swipe: false,
+        prevArrow:
+          "<button id='prev' type='button' class='btn btnPrev'><img src='{{ 'assets/img/partnersArrLeft.svg'|theme }}' alt=''></button>",
+        nextArrow:
+          "<button id='next' type='button' class='btn btnNext'><img src='{{ 'assets/img/partnersArrRight.svg'|theme }}' alt=''></button>",
+
+        responsive: [
+          {
+            breakpoint: 920,
+            settings: {
+              arrow: false,
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false,
+              draggable: true,
+              swipe: true,
+              arrow: false,
+              infinite: true,
+            },
+          },
+        ],
+      });
+    </script>
+    <script>
+      $(".winnerSlider").slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: false,
+        draggable: false,
+        rows: 2,
+        swipe: false,
+        prevArrow:
+          "<button id='prev' type='button' class='btn btnPrev'><img src='{{ 'assets/img/partnersArrLeft.svg'|theme }}' alt=''></button>",
+
+        nextArrow:
+          "<button id='next' type='button' class='btn btnNext'><img src='{{ 'assets/img/partnersArrRight.svg'|theme }}' alt=''></button>",
+        responsive: [
+          {
+            breakpoint: 920,
+            settings: {
+              arrow: false,
+              slidesToShow: 1.4,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false,
+              arrow: false,
+              draggable: true,
+              swipe: true,
+            },
+          },
+        ],
+      });
+    </script>
+    <script>
+      $(".condition_mobil").slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrow: false,
+        dots: true,
+        draggable: false,
+        rows: 1,
+        swipe: true,
+      });
+    </script>
+    <script src="{{ 'assets/js/script.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+
+  </body>
+</html>";s:5:"mtime";i:1615044361;s:6:"markup";s:6372:"{% set socials = socialList.records %}
+{% set mainInfo = mainInfoList.records[0] %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWB</title>
+    <link rel="stylesheet" href="{{ 'assets/css/ctyle.css'|theme }}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    {% styles %}
+  </head>
+  <body>
+    <section class="header">
+      {% partial 'site/header' %}
+    </section>
+
+      {% page %}
+
+    <section class="feedback">
+      <div class="parallax background-tree" id="Paralax__img__feedback">
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb.svg'|theme }}" alt="" class="paraxImgMobil" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+        <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
+      </div>
+      <div class="feedback__wrap">
+        <div class="fw__title">
+          <p>{{ mainInfo.feedback_title }}</p>
+        </div>
+        <div class="fw__sn">
+          {% for s in socials %}
+            <a href="{{ s.url }}"><img src="{{ s.logo_social.path }}" alt="" /></a>
+          {% endfor %}
+        </div>
+        {% component 'feedbackform' %}
+      </div>
+      <div class="copyWrite">
+        <p>
+          © 2021 <a href="https://itd.company/" target="_blank">ITD Company</a>.
+          All rights reserved
+        </p>
+      </div>
+    </section>
+
+    <div class="scrollUP">
+      <img src="{{ 'assets/img/arrUP.svg'|theme }}" alt="" />
+    </div>
+
+    <div class="scrollBar"></div>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(".partnersSlider").slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: false,
+        draggable: false,
+        rows: 2,
+        swipe: false,
+        prevArrow:
+          "<button id='prev' type='button' class='btn btnPrev'><img src='{{ 'assets/img/partnersArrLeft.svg'|theme }}' alt=''></button>",
+        nextArrow:
+          "<button id='next' type='button' class='btn btnNext'><img src='{{ 'assets/img/partnersArrRight.svg'|theme }}' alt=''></button>",
+        responsive: [
+          {
+            breakpoint: 920,
+            settings: {
+              arrow: false,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false,
+              draggable: true,
+            },
+          },
+        ],
+      });
+    </script>
+    <script>
+      $(".partnersPrizeSlider").slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: false,
+        draggable: false,
+        rows: 1,
+        swipe: false,
+        prevArrow:
+          "<button id='prev' type='button' class='btn btnPrev'><img src='{{ 'assets/img/partnersArrLeft.svg'|theme }}' alt=''></button>",
+        nextArrow:
+          "<button id='next' type='button' class='btn btnNext'><img src='{{ 'assets/img/partnersArrRight.svg'|theme }}' alt=''></button>",
+
+        responsive: [
+          {
+            breakpoint: 920,
+            settings: {
+              arrow: false,
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false,
+              draggable: true,
+              swipe: true,
+              arrow: false,
+              infinite: true,
+            },
+          },
+        ],
+      });
+    </script>
+    <script>
+      $(".winnerSlider").slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: false,
+        draggable: false,
+        rows: 2,
+        swipe: false,
+        prevArrow:
+          "<button id='prev' type='button' class='btn btnPrev'><img src='{{ 'assets/img/partnersArrLeft.svg'|theme }}' alt=''></button>",
+
+        nextArrow:
+          "<button id='next' type='button' class='btn btnNext'><img src='{{ 'assets/img/partnersArrRight.svg'|theme }}' alt=''></button>",
+        responsive: [
+          {
+            breakpoint: 920,
+            settings: {
+              arrow: false,
+              slidesToShow: 1.4,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false,
+              arrow: false,
+              draggable: true,
+              swipe: true,
+            },
+          },
+        ],
+      });
+    </script>
+    <script>
+      $(".condition_mobil").slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrow: false,
+        dots: true,
+        draggable: false,
+        rows: 1,
+        swipe: true,
+      });
+    </script>
+    <script src="{{ 'assets/js/script.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+
+  </body>
+</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";s:12:"feedbackform";a:0:{}s:22:"builderList socialList";a:8:{s:10:"modelClass";s:23:"Swb\Admin\Models\Social";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"name";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:24:"builderList mainInfoList";a:8:{s:10:"modelClass";s:25:"Swb\Admin\Models\MainInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:14:"feedback_title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

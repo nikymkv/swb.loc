@@ -1,0 +1,40 @@
+plugin:
+    name: 'swb.admin::lang.plugin.name'
+    description: 'swb.admin::lang.plugin.description'
+    author: swb
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'swb.admin::lang.plugin.name'
+        url: /swb/admin/maininfocontroller
+        icon: icon-user
+        sideMenu:
+            main-info-menu-item:
+                label: 'Основная информация'
+                url: swb/admin/maininfocontroller
+                icon: icon-info
+            condition-menu-item:
+                label: Условия
+                url: swb/admin/condition
+                icon: icon-exclamation
+            partners-menu-item:
+                label: Партнеры
+                url: swb/admin/partnercontroller
+                icon: icon-group
+            gifts-menu-item:
+                label: Призы
+                url: swb/admin/giftcontroller
+                icon: icon-gift
+            winners-menu-item:
+                label: Победители
+                url: swb/admin/winner
+                icon: icon-birthday-cake
+            socials-menu-item:
+                label: 'Соц. сети'
+                url: swb/admin/socialcontroller
+                icon: icon-external-link
+            about-menu-item:
+                label: 'О проекте'
+                url: swb/admin/aboutcontroller
+                icon: icon-sitemap
