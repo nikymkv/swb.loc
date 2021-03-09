@@ -1,4 +1,4 @@
-1615048375a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:2709:"[builderList mainInfoList]
+1615277366a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:2711:"[builderList mainInfoList]
 modelClass = "Swb\Admin\Models\MainInfo"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -46,10 +46,12 @@ pageNumber = "{{ :page }}"
     </div>
     <div class="mt__button">
       <div class="mtb__wrap">
-        <label>присоединиться</label>
+        <label>{{mainInfo.title_btn}}</label>
       </div>
     </div>
+    
   </div>
+
 </div>
 <img src="{{ 'assets/img/main_bg.png'|theme }}" class="mainBG" alt="" />
 <div class="mobilBottomLine"></div>
@@ -62,7 +64,7 @@ pageNumber = "{{ :page }}"
     <li class="feedbackNav"><p class="navWhite">связаться с нами</p></li>
     <img src="{{ 'assets/img/mobilCross.svg'|theme }}" alt="" class="navCross" />
   </ul>
-</div>";s:5:"mtime";i:1615042566;s:6:"markup";s:2454:"{% set mainInfo = mainInfoList.records[0] %}
+</div>";s:5:"mtime";i:1615276750;s:6:"markup";s:2456:"{% set mainInfo = mainInfoList.records[0] %}
 <div class="parallax background-tree" id="Paralax__img">
   <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
   <img src="{{ 'assets/img/swb_uncolor.svg'|theme }}" alt="" />
@@ -100,10 +102,12 @@ pageNumber = "{{ :page }}"
     </div>
     <div class="mt__button">
       <div class="mtb__wrap">
-        <label>присоединиться</label>
+        <label>{{mainInfo.title_btn}}</label>
       </div>
     </div>
+    
   </div>
+
 </div>
 <img src="{{ 'assets/img/main_bg.png'|theme }}" class="mainBG" alt="" />
 <div class="mobilBottomLine"></div>

@@ -167,13 +167,18 @@ class __TwigTemplate_496e5bcbe0dc075f7541480aeea763982db47a51a9d6e4b0144fe23e7d1
     </div>
     <div class=\"mt__button\">
       <div class=\"mtb__wrap\">
-        <label>присоединиться</label>
+        <label>";
+        // line 39
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "title_btn", [], "any", false, false, true, 39), 39, $this->source), "html", null, true);
+        echo "</label>
       </div>
     </div>
+    
   </div>
+
 </div>
 <img src=\"";
-        // line 44
+        // line 46
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/main_bg.png");
         echo "\" class=\"mainBG\" alt=\"\" />
 <div class=\"mobilBottomLine\"></div>
@@ -185,7 +190,7 @@ class __TwigTemplate_496e5bcbe0dc075f7541480aeea763982db47a51a9d6e4b0144fe23e7d1
     <li class=\"winnerNav\"><p>победители</p></li>
     <li class=\"feedbackNav\"><p class=\"navWhite\">связаться с нами</p></li>
     <img src=\"";
-        // line 53
+        // line 55
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/mobilCross.svg");
         echo "\" alt=\"\" class=\"navCross\" />
   </ul>
@@ -204,7 +209,7 @@ class __TwigTemplate_496e5bcbe0dc075f7541480aeea763982db47a51a9d6e4b0144fe23e7d1
 
     public function getDebugInfo()
     {
-        return array (  189 => 53,  177 => 44,  165 => 35,  159 => 32,  153 => 29,  145 => 24,  141 => 23,  135 => 20,  131 => 19,  127 => 18,  123 => 17,  119 => 16,  115 => 15,  111 => 14,  107 => 13,  103 => 12,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  71 => 4,  67 => 3,  64 => 2,  62 => 1,);
+        return array (  194 => 55,  182 => 46,  172 => 39,  165 => 35,  159 => 32,  153 => 29,  145 => 24,  141 => 23,  135 => 20,  131 => 19,  127 => 18,  123 => 17,  119 => 16,  115 => 15,  111 => 14,  107 => 13,  103 => 12,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  71 => 4,  67 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -247,10 +252,12 @@ class __TwigTemplate_496e5bcbe0dc075f7541480aeea763982db47a51a9d6e4b0144fe23e7d1
     </div>
     <div class=\"mt__button\">
       <div class=\"mtb__wrap\">
-        <label>присоединиться</label>
+        <label>{{mainInfo.title_btn}}</label>
       </div>
     </div>
+    
   </div>
+
 </div>
 <img src=\"{{ 'assets/img/main_bg.png'|theme }}\" class=\"mainBG\" alt=\"\" />
 <div class=\"mobilBottomLine\"></div>

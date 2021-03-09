@@ -25,6 +25,16 @@ tabs:
             span: left
             type: richeditor
             tab: Шапка
+        title_btn:
+            label: 'Текст на кнопке'
+            span: right
+            type: text
+            tab: Шапка
+        main_title_interest:
+            label: 'Заголовок блока'
+            span: full
+            type: text
+            tab: 'Кому интересно'
         interesting_title1:
             label: 'Заголовок левой записи'
             span: left
@@ -50,5 +60,35 @@ tabs:
         feedback_title:
             label: 'Заголовок обратной формы'
             span: left
+            type: text
+            tab: 'Обратная форма'
+        form_name:
+            label: 'Поле имени'
+            span: right
+            type: text
+            tab: 'Обратная форма'
+        form_email:
+            label: 'Поле с почтой'
+            span: left
+            type: text
+            tab: 'Обратная форма'
+        form_phone:
+            label: 'Поле с телефоном'
+            span: right
+            type: text
+            tab: 'Обратная форма'
+        form_participant:
+            label: 'Выпадающий список 1'
+            span: left
+            type: text
+            tab: 'Обратная форма'
+        form_partner:
+            label: 'Выпадающий список 2'
+            span: right
+            type: text
+            tab: 'Обратная форма'
+        form_btn:
+            label: 'Текст кнопки'
+            span: auto
             type: text
             tab: 'Обратная форма'

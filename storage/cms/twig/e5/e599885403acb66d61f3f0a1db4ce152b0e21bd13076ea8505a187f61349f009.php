@@ -29,13 +29,13 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 1, "for" => 29, "partial" => 88);
+        $tags = array("set" => 1, "component" => 4, "for" => 29, "partial" => 88);
         $filters = array("theme" => 6, "escape" => 24, "raw" => 50, "replace" => 50);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'for', 'partial'],
+                ['set', 'component', 'for', 'partial'],
                 ['theme', 'escape', 'raw', 'replace'],
                 []
             );
@@ -65,8 +65,15 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
         // line 3
         $context["partners"] = twig_get_attribute($this->env, $this->source, ($context["partnersList"] ?? null), "records", [], "any", false, false, true, 3);
         // line 4
-        echo "<section class=\"condition\">
-<div class=\"parallax background-tree\" id=\"Paralax__img_condition\">
+        echo "<section class=\"condition\">";
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("localePicker"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("localePicker2"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 5
+        echo "<div class=\"parallax background-tree\" id=\"Paralax__img_condition\">
     <img src=\"";
         // line 6
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
@@ -181,7 +188,10 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
         </a>
     </div>
     <div class=\"cw__whoInterested\">
-        <p class=\"cww__title\">кому это интересно</p>
+        <p class=\"cww__title\">";
+        // line 46
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "main_title_interest", [], "any", false, false, true, 46), 46, $this->source), "html", null, true);
+        echo "</p>
         <div class=\"cww__block__wrap\">
             <div class=\"cww__block\">
                 <p>";
@@ -342,7 +352,7 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 
     public function getDebugInfo()
     {
-        return array (  330 => 109,  326 => 108,  316 => 101,  313 => 100,  309 => 99,  297 => 89,  293 => 88,  286 => 83,  275 => 81,  271 => 80,  262 => 74,  258 => 73,  254 => 72,  250 => 71,  246 => 70,  242 => 69,  238 => 68,  234 => 67,  230 => 66,  226 => 65,  222 => 64,  218 => 63,  214 => 62,  204 => 55,  200 => 54,  193 => 50,  189 => 49,  178 => 41,  173 => 38,  164 => 36,  160 => 35,  155 => 32,  146 => 30,  142 => 29,  133 => 25,  129 => 24,  120 => 18,  116 => 17,  112 => 16,  108 => 15,  104 => 14,  100 => 13,  96 => 12,  92 => 11,  88 => 10,  84 => 9,  80 => 8,  76 => 7,  72 => 6,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  340 => 109,  336 => 108,  326 => 101,  323 => 100,  319 => 99,  307 => 89,  303 => 88,  296 => 83,  285 => 81,  281 => 80,  272 => 74,  268 => 73,  264 => 72,  260 => 71,  256 => 70,  252 => 69,  248 => 68,  244 => 67,  240 => 66,  236 => 65,  232 => 64,  228 => 63,  224 => 62,  214 => 55,  210 => 54,  203 => 50,  199 => 49,  193 => 46,  185 => 41,  180 => 38,  171 => 36,  167 => 35,  162 => 32,  153 => 30,  149 => 29,  140 => 25,  136 => 24,  127 => 18,  123 => 17,  119 => 16,  115 => 15,  111 => 14,  107 => 13,  103 => 12,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  76 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -350,7 +360,7 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
         return new Source("{% set condition = conditionList.records[0] %}
 {% set mainInfo = mainInfoList.records[0] %}
 {% set partners = partnersList.records %}
-<section class=\"condition\">
+<section class=\"condition\">{% component 'localePicker' %}{% component 'localePicker2' %}
 <div class=\"parallax background-tree\" id=\"Paralax__img_condition\">
     <img src=\"{{ 'assets/img/condition_title.png'|theme }}\" alt=\"\" />
     <img src=\"{{ 'assets/img/condition_title_light.png'|theme }}\" alt=\"\" class=\"paraxImgMobil\" />
@@ -392,7 +402,7 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
         </a>
     </div>
     <div class=\"cw__whoInterested\">
-        <p class=\"cww__title\">кому это интересно</p>
+        <p class=\"cww__title\">{{ mainInfo.main_title_interest }}</p>
         <div class=\"cww__block__wrap\">
             <div class=\"cww__block\">
                 <p>{{ mainInfo.interesting_title1 }}</p>

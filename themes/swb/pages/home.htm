@@ -32,11 +32,17 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
+[localePicker]
+forceUrl = 0
+
+[localePicker localePicker2]
+forceUrl = 0
 ==
 {% set condition = conditionList.records[0] %}
 {% set mainInfo = mainInfoList.records[0] %}
 {% set partners = partnersList.records %}
-<section class="condition">
+<section class="condition">{% component 'localePicker' %}{% component 'localePicker2' %}
 <div class="parallax background-tree" id="Paralax__img_condition">
     <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
     <img src="{{ 'assets/img/condition_title_light.png'|theme }}" alt="" class="paraxImgMobil" />
@@ -78,7 +84,7 @@ pageNumber = "{{ :page }}"
         </a>
     </div>
     <div class="cw__whoInterested">
-        <p class="cww__title">кому это интересно</p>
+        <p class="cww__title">{{ mainInfo.main_title_interest }}</p>
         <div class="cww__block__wrap">
             <div class="cww__block">
                 <p>{{ mainInfo.interesting_title1 }}</p>

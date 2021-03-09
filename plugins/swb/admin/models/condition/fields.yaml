@@ -1,9 +1,10 @@
 tabs:
     fields:
         location:
-            label: 'Ссылка на Instagram'
+            label: 'Заголовок блока'
+            size: ''
             span: auto
-            type: text
+            type: richeditor
             tab: 'Место проведения'
         gallery:
             label: 'Загрузить изображения условий'

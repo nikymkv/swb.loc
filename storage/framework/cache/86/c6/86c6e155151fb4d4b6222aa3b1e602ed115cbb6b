@@ -1,4 +1,4 @@
-1615048695a:1:{s:8:"home.htm";a:12:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:5491:"title = "SWB"
+1615277673a:1:{s:8:"home.htm";a:14:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:5630:"title = "SWB"
 url = "/"
 layout = "default"
 is_hidden = 0
@@ -32,11 +32,17 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
+[localePicker]
+forceUrl = 0
+
+[localePicker localePicker2]
+forceUrl = 0
 ==
 {% set condition = conditionList.records[0] %}
 {% set mainInfo = mainInfoList.records[0] %}
 {% set partners = partnersList.records %}
-<section class="condition">
+<section class="condition">{% component 'localePicker' %}{% component 'localePicker2' %}
 <div class="parallax background-tree" id="Paralax__img_condition">
     <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
     <img src="{{ 'assets/img/condition_title_light.png'|theme }}" alt="" class="paraxImgMobil" />
@@ -78,7 +84,7 @@ pageNumber = "{{ :page }}"
         </a>
     </div>
     <div class="cw__whoInterested">
-        <p class="cww__title">кому это интересно</p>
+        <p class="cww__title">{{ mainInfo.main_title_interest }}</p>
         <div class="cww__block__wrap">
             <div class="cww__block">
                 <p>{{ mainInfo.interesting_title1 }}</p>
@@ -141,10 +147,10 @@ pageNumber = "{{ :page }}"
         </div>
     </div>
     {% partial 'winners' %}
-</section>";s:5:"mtime";i:1615048093;s:6:"markup";s:4663:"{% set condition = conditionList.records[0] %}
+</section>";s:5:"mtime";i:1615277072;s:6:"markup";s:4724:"{% set condition = conditionList.records[0] %}
 {% set mainInfo = mainInfoList.records[0] %}
 {% set partners = partnersList.records %}
-<section class="condition">
+<section class="condition">{% component 'localePicker' %}{% component 'localePicker2' %}
 <div class="parallax background-tree" id="Paralax__img_condition">
     <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
     <img src="{{ 'assets/img/condition_title_light.png'|theme }}" alt="" class="paraxImgMobil" />
@@ -186,7 +192,7 @@ pageNumber = "{{ :page }}"
         </a>
     </div>
     <div class="cw__whoInterested">
-        <p class="cww__title">кому это интересно</p>
+        <p class="cww__title">{{ mainInfo.main_title_interest }}</p>
         <div class="cww__block__wrap">
             <div class="cww__block">
                 <p>{{ mainInfo.interesting_title1 }}</p>
@@ -249,4 +255,4 @@ pageNumber = "{{ :page }}"
         </div>
     </div>
     {% partial 'winners' %}
-</section>";s:4:"code";N;s:5:"title";s:3:"SWB";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:25:"builderList conditionList";a:8:{s:10:"modelClass";s:26:"Swb\Admin\Models\Condition";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:8:"location";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:24:"builderList mainInfoList";a:8:{s:10:"modelClass";s:25:"Swb\Admin\Models\MainInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"quote";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:24:"builderList partnersList";a:8:{s:10:"modelClass";s:24:"Swb\Admin\Models\Partner";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+</section>";s:4:"code";N;s:5:"title";s:3:"SWB";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:25:"builderList conditionList";a:8:{s:10:"modelClass";s:26:"Swb\Admin\Models\Condition";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:8:"location";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:24:"builderList mainInfoList";a:8:{s:10:"modelClass";s:25:"Swb\Admin\Models\MainInfo";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"quote";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:24:"builderList partnersList";a:8:{s:10:"modelClass";s:24:"Swb\Admin\Models\Partner";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}s:26:"localePicker localePicker2";a:1:{s:8:"forceUrl";s:1:"0";}}}
