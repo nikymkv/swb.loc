@@ -38,6 +38,10 @@ class MainInfo extends Model
         'form_partner',
         'feedback_title',
         'form_btn',
+        'pr_title_1',
+        'pr_title_2',
+        'w_title_1',
+        'w_title_2',
     ];
 
     /**

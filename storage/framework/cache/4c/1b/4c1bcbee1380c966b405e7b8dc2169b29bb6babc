@@ -1,4 +1,4 @@
-1615277083a:1:{s:9:"about.htm";a:6:{s:8:"fileName";s:9:"about.htm";s:7:"content";s:2125:"[builderList aboutList]
+1615296930a:1:{s:9:"about.htm";a:6:{s:8:"fileName";s:9:"about.htm";s:7:"content";s:2135:"[builderList aboutList]
 modelClass = "Swb\Admin\Models\About"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -25,23 +25,23 @@ pageNumber = "{{ :page }}"
 <div class="about__draw">
     <div class="ad__wrap">
         <div class="adw__block abw__draw">
-            <p>розыгрыш</p>
-            <span>призов</span>
+            <p>{{ about.title_1 }}</p>
+            <span>{{ about.title_2 }}</span>
         </div>
         <div class="adw__count">
             <div class="adw__block adw__counts">
                 <p>{{ about.left_digit }}</p>
-                <span>раз</span>
+                <span>{{ about.label_left }}</span>
             </div>
-            <span class="adw__count__middle">в</span>
+            <span class="adw__count__middle">{{ about.between }}</span>
             <div class="adw__block adw__month">
                 <p>{{ about.right_digit }}</p>
-                <span>{{месяца}}</span>
+                <span>{{ about.label_right }}</span>
             </div>
         </div>
         <div class="adw__block adw__live">
-            <p>в прямом эфире</p>
-            <span>с помощью сервиса <a href="{{ about.url_random }}">рандомайзер</a></span>
+            <p>{{ about.location_1 }}</p>
+            <span>{{ about.location_2|replace({'<p>':'','</p>':''})|raw }}</span>
         </div>
     </div>
     <div class="ad__draw__right">
@@ -50,7 +50,7 @@ pageNumber = "{{ :page }}"
             <span>{{ about.text_duration }}</span>
         </div>
     </div>
-</div>";s:5:"mtime";i:1615041064;s:6:"markup";s:1871:"{% set about = aboutList.records[0] %}
+</div>";s:5:"mtime";i:1615283783;s:6:"markup";s:1881:"{% set about = aboutList.records[0] %}
 <div class="parallax background-tree" id="Paralax__img_about">
     <img src="{{ 'assets/img/abouts.png'|theme }}" alt="" />
     <img src="{{ 'assets/img/aboutLight.png'|theme }}" alt="" class="paraxImgMobil" />
@@ -67,23 +67,23 @@ pageNumber = "{{ :page }}"
 <div class="about__draw">
     <div class="ad__wrap">
         <div class="adw__block abw__draw">
-            <p>розыгрыш</p>
-            <span>призов</span>
+            <p>{{ about.title_1 }}</p>
+            <span>{{ about.title_2 }}</span>
         </div>
         <div class="adw__count">
             <div class="adw__block adw__counts">
                 <p>{{ about.left_digit }}</p>
-                <span>раз</span>
+                <span>{{ about.label_left }}</span>
             </div>
-            <span class="adw__count__middle">в</span>
+            <span class="adw__count__middle">{{ about.between }}</span>
             <div class="adw__block adw__month">
                 <p>{{ about.right_digit }}</p>
-                <span>{{месяца}}</span>
+                <span>{{ about.label_right }}</span>
             </div>
         </div>
         <div class="adw__block adw__live">
-            <p>в прямом эфире</p>
-            <span>с помощью сервиса <a href="{{ about.url_random }}">рандомайзер</a></span>
+            <p>{{ about.location_1 }}</p>
+            <span>{{ about.location_2|replace({'<p>':'','</p>':''})|raw }}</span>
         </div>
     </div>
     <div class="ad__draw__right">

@@ -6,8 +6,8 @@ tabs:
             span: auto
             type: richeditor
             tab: 'Место проведения'
-        gallery:
-            label: 'Загрузить изображения условий'
+        gallery_ru:
+            label: 'Загрузить изображения условий (ru)'
             mode: image
             useCaption: true
             thumbOptions:
@@ -16,8 +16,8 @@ tabs:
             span: left
             type: fileupload
             tab: Условия
-        gallery_mobile:
-            label: 'Загрузить изображения условий (мобилка)'
+        gallery_mobile_ru:
+            label: 'Загрузить изображения условий (мобилка) (ru)'
             mode: image
             useCaption: true
             thumbOptions:
@@ -26,18 +26,49 @@ tabs:
             span: right
             type: fileupload
             tab: Условия
-        title_document:
-            label: Подпись
+        gallery_en:
+            label: 'Загрузить изображения условий (en)'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
             span: left
-            type: text
+            type: fileupload
+            tab: Условия
+        gallery_mobile_en:
+            label: 'Загрузить изображения условий (мобилка) (en)'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Условия
+        title_document:
+            label: Заголовок
+            size: ''
+            span: auto
+            type: richeditor
             tab: Правила
-        rules:
-            label: 'Правила проведения'
+        rules_ru:
+            label: 'Правила проведения (ru)'
             mode: file
             useCaption: true
             thumbOptions:
                 mode: crop
                 extension: auto
-            span: right
+            span: left
+            type: fileupload
+            tab: Правила
+        rules_en:
+            label: 'Правила проведения (en)'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: left
             type: fileupload
             tab: Правила

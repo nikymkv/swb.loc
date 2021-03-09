@@ -7,12 +7,20 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
+[localePicker]
+forceUrl = 0
 ==
 {% set gifts = giftsList.records %}
+
 <div class="prize__wrap">
     <div class="slider partnersPrizeSlider">
         {% for gift in gifts %}
-            <div><img src="{{ gift.logo_gift.path }}" alt="" /></div>
+            {% if activeLocale == 'ru' %}
+                <div><img src="{{ gift.logo_gift_ru.path }}" alt="" /></div>
+            {% elseif activeLocale == 'en' %}
+                <div><img src="{{ gift.logo_gift_en.path }}" alt="" /></div>
+            {% endif %}
         {% endfor %}
     </div>
     <div class="partnersSliderArrow"></div>

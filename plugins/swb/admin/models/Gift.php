@@ -28,6 +28,7 @@ class Gift extends Model
     ];
 
     public $attachOne = [
-        'logo_gift' => 'System\Models\File',
+        'logo_gift_ru' => 'System\Models\File',
+        'logo_gift_en' => 'System\Models\File',
     ];
 }

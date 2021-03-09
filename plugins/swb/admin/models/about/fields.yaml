@@ -1,12 +1,28 @@
 fields:
+    title_1:
+        label: 'Выделенная часть заголовка'
+        span: auto
+        type: text
+    title_2:
+        label: 'Невыделенная часть заголовка'
+        span: auto
+        type: text
     left_digit:
         label: 'Цифра слева'
         span: left
         type: number
+    label_left:
+        label: Подпись
+        span: auto
+        type: text
     right_digit:
         label: 'Цифра справа'
-        span: right
+        span: auto
         type: number
+    label_right:
+        label: Подпись
+        span: auto
+        type: text
     duration:
         label: Продолжительность
         span: auto
@@ -15,7 +31,16 @@ fields:
         label: Месяц/год
         span: right
         type: text
-    url_random:
-        label: 'URL на рандомайзер'
+    between:
+        label: Периодичность
         span: auto
         type: text
+    location_1:
+        label: 'Выделенная часть места проведения'
+        span: left
+        type: text
+    location_2:
+        label: 'Невыделенная часть места проведения'
+        size: ''
+        span: left
+        type: richeditor

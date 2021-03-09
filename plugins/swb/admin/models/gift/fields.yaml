@@ -3,17 +3,26 @@ fields:
         label: Заголовок
         span: left
         type: text
-    logo_gift:
-        label: 'Загрузить изображение'
-        mode: image
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
     desc:
         label: Описание
         size: ''
         span: auto
         type: richeditor
+    logo_gift_ru:
+        label: 'Загрузить изображение (ru)'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    logo_gift_en:
+        label: 'Загрузить изображение (en)'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload

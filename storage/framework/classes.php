@@ -108,4 +108,5 @@
   'RainLab\\Translate\\Classes\\LocaleMiddleware' => 'plugins\\rainlab\\translate\\classes\\LocaleMiddleware.php',
   'RainLab\\Translate\\Models\\Message' => 'plugins\\rainlab\\translate\\models\\Message.php',
   'RainLab\\Translate\\FormWidgets\\MLTextarea' => 'plugins\\rainlab\\translate\\formwidgets\\MLTextarea.php',
+  'CMS\\Classes\\ComponentBase' => 'modules\\cms\\classes\\ComponentBase.php',
 );

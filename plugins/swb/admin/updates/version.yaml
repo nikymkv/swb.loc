@@ -57,3 +57,15 @@
 1.0.20:
     - 'Updated table swb_admin_main_info'
     - builder_table_update_swb_admin_main_info_5.php
+1.0.21:
+    - 'Updated table swb_admin_about'
+    - builder_table_update_swb_admin_about.php
+1.0.22:
+    - 'Updated table swb_admin_about'
+    - builder_table_update_swb_admin_about_2.php
+1.0.23:
+    - 'Updated table swb_admin_main_info'
+    - builder_table_update_swb_admin_main_info_6.php
+1.0.24:
+    - 'Updated table swb_admin_main_info'
+    - builder_table_update_swb_admin_main_info_7.php

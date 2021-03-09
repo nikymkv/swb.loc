@@ -42,7 +42,17 @@ forceUrl = 0
 {% set condition = conditionList.records[0] %}
 {% set mainInfo = mainInfoList.records[0] %}
 {% set partners = partnersList.records %}
+
 <section class="condition">{% component 'localePicker' %}{% component 'localePicker2' %}
+
+{% if activeLocale == 'ru' %}
+    {% set gallery = condition.gallery_ru %}
+    {% set gallery_mobile = condition.gallery_mobile_ru %}
+{% elseif activeLocale == 'en' %}
+    {% set gallery = condition.gallery_en %}
+    {% set gallery_mobile = condition.gallery_mobile_en %}
+{% endif %}
+
 <div class="parallax background-tree" id="Paralax__img_condition">
     <img src="{{ 'assets/img/condition_title.png'|theme }}" alt="" />
     <img src="{{ 'assets/img/condition_title_light.png'|theme }}" alt="" class="paraxImgMobil" />
@@ -62,26 +72,24 @@ forceUrl = 0
 <div class="condition__wrap">
     <div class="cw__title">
         <p>
-            проект проводится в <a href="{{ condition.location }}">instagram</a>
+            {{ condition.location|replace({'<p>':'','</p>':''})|raw }}
             <a href="{{ condition.location }}" class="instHref" target="_blanc"><img src="{{ 'assets/img/condition_inst_title.svg'|theme }}" alt=""/></a>
         </p>
     </div>
     <div class="cw__content__img">
-        {% for img in condition.gallery %}
+        {% for img in gallery %}
             <img src="{{ img.path }}" alt="" />
         {% endfor %}
     </div>
     <div class="cw__content__img__mobil">
         <div class="slider condition_mobil">
-            {% for img in condition.gallery_mobile %}
-            <img src="{{ img.path }}" alt="" />
-        {% endfor %}
+            {% for img in gallery_mobile %}
+                <img src="{{ img.path }}" alt="" />
+            {% endfor %}
         </div>
     </div>
     <div class="cw__rule">
-        <a href="{{ condition.rules.path }}" target="_blank"><span>ознакомьтесь</span>
-            <p>с общими правилами проекта</p>
-        </a>
+        <a href="{{ condition.rules_ru.path }}" target="_blank">{{ condition.title_document|raw }}</a>
     </div>
     <div class="cw__whoInterested">
         <p class="cww__title">{{ mainInfo.main_title_interest }}</p>
@@ -119,7 +127,11 @@ forceUrl = 0
 <section class="partners">
     <div class="slider partnersSlider">
         {% for p in partners %}
-            <a href="{{ p.url }}"><img src="{{ p.logo_partner.path }}" alt="" /></a>
+            {% if activeLocale == 'ru' %}
+                <a href="{{ p.url }}"><img src="{{ p.logo_partner_ru.path }}" alt="" /></a>
+            {% elseif activeLocale == 'en' %}
+                <a href="{{ p.url }}"><img src="{{ p.logo_partner_en.path }}" alt="" /></a>
+            {% endif %}
         {% endfor %}
     </div>
     <div class="partnersSliderArrow"></div>
@@ -131,8 +143,8 @@ forceUrl = 0
 
 <div class="title">
     <div class="title__wrap">
-        <span>призы от</span>
-        <p>партнеров</p>
+        <span>{{ mainInfo.pr_title_1 }}</span>
+        <p>{{ mainInfo.pr_title_2 }}</p>
     </div>
 </div>
 
@@ -142,8 +154,8 @@ forceUrl = 0
 <section class="winner {{ (mainInfo.block_winners) == (0) ? mainInfo.block_class : '' }}">
     <div class="title">
         <div class="title__wrap">
-            <span>победители</span>
-            <p>розыгрыша</p>
+            <span>{{ mainInfo.w_title_1 }}</span>
+            <p>{{ mainInfo.w_title_2 }}</p>
         </div>
     </div>
     {% partial 'winners' %}

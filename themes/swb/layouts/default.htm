@@ -77,7 +77,33 @@ pageNumber = "{{ :page }}"
             <a href="{{ s.url }}"><img src="{{ s.logo_social.path }}" alt="" /></a>
           {% endfor %}
         </div>
-        {% component 'feedbackform' %}
+        <form data-request="onSend">
+    <div class="input__wrpBG">
+      <input type="text" name="name" placeholder="{{ mainInfo.form_name }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="email" name="email" placeholder="{{ mainInfo.form_email }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="phone" name="phone" placeholder="{{ mainInfo.form_phone }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="text" name="select" value="{{ mainInfo.form_participant }}" id="select" readonly>
+      <div class="ulSeectWrap">
+        <ul id="optins">
+          <li>{{ mainInfo.form_participant }}</li>
+          <li>{{ mainInfo.form_partner }}</li>  
+        </ul>
+      </div>
+    </div>
+
+    <div class="submit">
+      <input type="submit" value="{{ mainInfo.form_btn }}" class="submitForm"/>
+    </div>
+  </form>
       </div>
       <div class="copyWrite">
         <p>

@@ -29,14 +29,14 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 1, "component" => 4, "for" => 29, "partial" => 88);
-        $filters = array("theme" => 6, "escape" => 24, "raw" => 50, "replace" => 50);
+        $tags = array("set" => 1, "component" => 5, "if" => 7, "for" => 39, "partial" => 100);
+        $filters = array("theme" => 16, "raw" => 34, "replace" => 34, "escape" => 35);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'component', 'for', 'partial'],
-                ['theme', 'escape', 'raw', 'replace'],
+                ['set', 'component', 'if', 'for', 'partial'],
+                ['theme', 'raw', 'replace', 'escape'],
                 []
             );
         } catch (SecurityError $e) {
@@ -65,65 +65,88 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
         // line 3
         $context["partners"] = twig_get_attribute($this->env, $this->source, ($context["partnersList"] ?? null), "records", [], "any", false, false, true, 3);
         // line 4
-        echo "<section class=\"condition\">";
+        echo "
+<section class=\"condition\">";
+        // line 5
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("localePicker"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("localePicker2"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 5
-        echo "<div class=\"parallax background-tree\" id=\"Paralax__img_condition\">
-    <img src=\"";
         // line 6
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
+        echo "
+";
         // line 7
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title_light.png");
-        echo "\" alt=\"\" class=\"paraxImgMobil\" />
-    <img src=\"";
-        // line 8
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 9
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 10
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title_light.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 11
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 12
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 13
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
+        if ((($context["activeLocale"] ?? null) == "ru")) {
+            // line 8
+            echo "    ";
+            $context["gallery"] = twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "gallery_ru", [], "any", false, false, true, 8);
+            // line 9
+            echo "    ";
+            $context["gallery_mobile"] = twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "gallery_mobile_ru", [], "any", false, false, true, 9);
+        } elseif ((        // line 10
+($context["activeLocale"] ?? null) == "en")) {
+            // line 11
+            echo "    ";
+            $context["gallery"] = twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "gallery_en", [], "any", false, false, true, 11);
+            // line 12
+            echo "    ";
+            $context["gallery_mobile"] = twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "gallery_mobile_en", [], "any", false, false, true, 12);
+        }
         // line 14
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 15
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
-        echo "\" alt=\"\" />
+        echo "
+<div class=\"parallax background-tree\" id=\"Paralax__img_condition\">
     <img src=\"";
         // line 16
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
         echo "\" alt=\"\" />
     <img src=\"";
         // line 17
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title_light.png");
+        echo "\" alt=\"\" class=\"paraxImgMobil\" />
+    <img src=\"";
+        // line 18
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
         echo "\" alt=\"\" />
     <img src=\"";
-        // line 18
+        // line 19
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 20
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title_light.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 21
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 22
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 23
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 24
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 25
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 26
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 27
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 28
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_title.png");
         echo "\" alt=\"\" />
 </div>
@@ -131,13 +154,13 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 <div class=\"condition__wrap\">
     <div class=\"cw__title\">
         <p>
-            проект проводится в <a href=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "location", [], "any", false, false, true, 24), 24, $this->source), "html", null, true);
-        echo "\">instagram</a>
+            ";
+        // line 34
+        echo twig_replace_filter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "location", [], "any", false, false, true, 34), 34, $this->source), ["<p>" => "", "</p>" => ""]);
+        echo "
             <a href=\"";
-        // line 25
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "location", [], "any", false, false, true, 25), 25, $this->source), "html", null, true);
+        // line 35
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "location", [], "any", false, false, true, 35), 35, $this->source), "html", null, true);
         echo "\" class=\"instHref\" target=\"_blanc\"><img src=\"";
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/condition_inst_title.svg");
         echo "\" alt=\"\"/></a>
@@ -145,73 +168,73 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
     </div>
     <div class=\"cw__content__img\">
         ";
-        // line 29
+        // line 39
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "gallery", [], "any", false, false, true, 29));
+        $context['_seq'] = twig_ensure_traversable(($context["gallery"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-            // line 30
+            // line 40
             echo "            <img src=\"";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["img"], "path", [], "any", false, false, true, 30), 30, $this->source), "html", null, true);
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["img"], "path", [], "any", false, false, true, 40), 40, $this->source), "html", null, true);
             echo "\" alt=\"\" />
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 42
         echo "    </div>
     <div class=\"cw__content__img__mobil\">
         <div class=\"slider condition_mobil\">
             ";
-        // line 35
+        // line 45
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "gallery_mobile", [], "any", false, false, true, 35));
+        $context['_seq'] = twig_ensure_traversable(($context["gallery_mobile"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-            // line 36
-            echo "            <img src=\"";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["img"], "path", [], "any", false, false, true, 36), 36, $this->source), "html", null, true);
+            // line 46
+            echo "                <img src=\"";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["img"], "path", [], "any", false, false, true, 46), 46, $this->source), "html", null, true);
             echo "\" alt=\"\" />
-        ";
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 48
         echo "        </div>
     </div>
     <div class=\"cw__rule\">
         <a href=\"";
-        // line 41
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "rules", [], "any", false, false, true, 41), "path", [], "any", false, false, true, 41), 41, $this->source), "html", null, true);
-        echo "\" target=\"_blank\"><span>ознакомьтесь</span>
-            <p>с общими правилами проекта</p>
-        </a>
+        // line 51
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "rules_ru", [], "any", false, false, true, 51), "path", [], "any", false, false, true, 51), 51, $this->source), "html", null, true);
+        echo "\" target=\"_blank\">";
+        echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["condition"] ?? null), "title_document", [], "any", false, false, true, 51), 51, $this->source);
+        echo "</a>
     </div>
     <div class=\"cw__whoInterested\">
         <p class=\"cww__title\">";
-        // line 46
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "main_title_interest", [], "any", false, false, true, 46), 46, $this->source), "html", null, true);
+        // line 54
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "main_title_interest", [], "any", false, false, true, 54), 54, $this->source), "html", null, true);
         echo "</p>
         <div class=\"cww__block__wrap\">
             <div class=\"cww__block\">
                 <p>";
-        // line 49
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "interesting_title1", [], "any", false, false, true, 49), 49, $this->source), "html", null, true);
+        // line 57
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "interesting_title1", [], "any", false, false, true, 57), 57, $this->source), "html", null, true);
         echo "</p>
                 <span>";
-        // line 50
-        echo twig_replace_filter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "interesting_desc1", [], "any", false, false, true, 50), 50, $this->source), ["<p>" => "", "</p>" => ""]);
+        // line 58
+        echo twig_replace_filter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "interesting_desc1", [], "any", false, false, true, 58), 58, $this->source), ["<p>" => "", "</p>" => ""]);
         echo "</span>
 
             </div>
             <div class=\"cww__block cww__blockBlue\">
                 <p>";
-        // line 54
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "interesting_title2", [], "any", false, false, true, 54), 54, $this->source), "html", null, true);
+        // line 62
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "interesting_title2", [], "any", false, false, true, 62), 62, $this->source), "html", null, true);
         echo "</p>
                 <span>";
-        // line 55
-        echo twig_replace_filter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "interesting_desc2", [], "any", false, false, true, 55), 55, $this->source), ["<p>" => "", "</p>" => ""]);
+        // line 63
+        echo twig_replace_filter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "interesting_desc2", [], "any", false, false, true, 63), 63, $this->source), ["<p>" => "", "</p>" => ""]);
         echo "</span>
             </div>
         </div>
@@ -220,55 +243,55 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 
 <div class=\"parallax ParalaxConditionBottom background-tree\" id=\"Paralax__img_condition_bottom\">
     <img src=\"";
-        // line 62
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 63
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners__light.png");
-        echo "\" alt=\"\" class=\"paraxImgMobil\" />
-    <img src=\"";
-        // line 64
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 65
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners__light.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 66
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 67
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 68
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
-        // line 69
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
-        echo "\" alt=\"\" />
-    <img src=\"";
         // line 70
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
         echo "\" alt=\"\" />
     <img src=\"";
         // line 71
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
-        echo "\" alt=\"\" />
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners__light.png");
+        echo "\" alt=\"\" class=\"paraxImgMobil\" />
     <img src=\"";
         // line 72
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
         echo "\" alt=\"\" />
     <img src=\"";
         // line 73
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners__light.png");
         echo "\" alt=\"\" />
     <img src=\"";
         // line 74
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 75
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 76
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 77
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 78
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 79
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 80
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 81
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
+        echo "\" alt=\"\" />
+    <img src=\"";
+        // line 82
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partners.png");
         echo "\" alt=\"\" />
 </div>
@@ -277,66 +300,93 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 <section class=\"partners\">
     <div class=\"slider partnersSlider\">
         ";
-        // line 80
+        // line 88
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["partners"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-            // line 81
-            echo "            <a href=\"";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["p"], "url", [], "any", false, false, true, 81), 81, $this->source), "html", null, true);
-            echo "\"><img src=\"";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "logo_partner", [], "any", false, false, true, 81), "path", [], "any", false, false, true, 81), 81, $this->source), "html", null, true);
-            echo "\" alt=\"\" /></a>
-        ";
+            // line 89
+            echo "            ";
+            if ((($context["activeLocale"] ?? null) == "ru")) {
+                // line 90
+                echo "                <a href=\"";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["p"], "url", [], "any", false, false, true, 90), 90, $this->source), "html", null, true);
+                echo "\"><img src=\"";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "logo_partner_ru", [], "any", false, false, true, 90), "path", [], "any", false, false, true, 90), 90, $this->source), "html", null, true);
+                echo "\" alt=\"\" /></a>
+            ";
+            } elseif ((            // line 91
+($context["activeLocale"] ?? null) == "en")) {
+                // line 92
+                echo "                <a href=\"";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["p"], "url", [], "any", false, false, true, 92), 92, $this->source), "html", null, true);
+                echo "\"><img src=\"";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "logo_partner_en", [], "any", false, false, true, 92), "path", [], "any", false, false, true, 92), 92, $this->source), "html", null, true);
+                echo "\" alt=\"\" /></a>
+            ";
+            }
+            // line 94
+            echo "        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 83
+        // line 95
         echo "    </div>
     <div class=\"partnersSliderArrow\"></div>
 </section>
 
 <section class=\"about\">
     ";
-        // line 88
+        // line 100
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("about"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 89
+        // line 101
         echo "</section>
 
 <div class=\"title\">
     <div class=\"title__wrap\">
-        <span>призы от</span>
-        <p>партнеров</p>
+        <span>";
+        // line 105
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "pr_title_1", [], "any", false, false, true, 105), 105, $this->source), "html", null, true);
+        echo "</span>
+        <p>";
+        // line 106
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "pr_title_2", [], "any", false, false, true, 106), 106, $this->source), "html", null, true);
+        echo "</p>
     </div>
 </div>
 
 <section class=\"prize\">
     ";
-        // line 99
+        // line 111
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("prize"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 100
+        // line 112
         echo "</section>
 <section class=\"winner ";
-        // line 101
-        (((twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "block_winners", [], "any", false, false, true, 101) == 0)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "block_class", [], "any", false, false, true, 101), "html", null, true))) : (print ("")));
+        // line 113
+        (((twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "block_winners", [], "any", false, false, true, 113) == 0)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "block_class", [], "any", false, false, true, 113), "html", null, true))) : (print ("")));
         echo "\">
     <div class=\"title\">
         <div class=\"title__wrap\">
-            <span>победители</span>
-            <p>розыгрыша</p>
+            <span>";
+        // line 116
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "w_title_1", [], "any", false, false, true, 116), 116, $this->source), "html", null, true);
+        echo "</span>
+            <p>";
+        // line 117
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "w_title_2", [], "any", false, false, true, 117), 117, $this->source), "html", null, true);
+        echo "</p>
         </div>
     </div>
     ";
-        // line 108
+        // line 120
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("winners"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 109
+        // line 121
         echo "</section>";
     }
 
@@ -352,7 +402,7 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 
     public function getDebugInfo()
     {
-        return array (  340 => 109,  336 => 108,  326 => 101,  323 => 100,  319 => 99,  307 => 89,  303 => 88,  296 => 83,  285 => 81,  281 => 80,  272 => 74,  268 => 73,  264 => 72,  260 => 71,  256 => 70,  252 => 69,  248 => 68,  244 => 67,  240 => 66,  236 => 65,  232 => 64,  228 => 63,  224 => 62,  214 => 55,  210 => 54,  203 => 50,  199 => 49,  193 => 46,  185 => 41,  180 => 38,  171 => 36,  167 => 35,  162 => 32,  153 => 30,  149 => 29,  140 => 25,  136 => 24,  127 => 18,  123 => 17,  119 => 16,  115 => 15,  111 => 14,  107 => 13,  103 => 12,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  76 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  390 => 121,  386 => 120,  380 => 117,  376 => 116,  370 => 113,  367 => 112,  363 => 111,  355 => 106,  351 => 105,  345 => 101,  341 => 100,  334 => 95,  328 => 94,  320 => 92,  318 => 91,  311 => 90,  308 => 89,  304 => 88,  295 => 82,  291 => 81,  287 => 80,  283 => 79,  279 => 78,  275 => 77,  271 => 76,  267 => 75,  263 => 74,  259 => 73,  255 => 72,  251 => 71,  247 => 70,  237 => 63,  233 => 62,  226 => 58,  222 => 57,  216 => 54,  208 => 51,  203 => 48,  194 => 46,  190 => 45,  185 => 42,  176 => 40,  172 => 39,  163 => 35,  159 => 34,  150 => 28,  146 => 27,  142 => 26,  138 => 25,  134 => 24,  130 => 23,  126 => 22,  122 => 21,  118 => 20,  114 => 19,  110 => 18,  106 => 17,  102 => 16,  98 => 14,  94 => 12,  91 => 11,  89 => 10,  86 => 9,  83 => 8,  81 => 7,  78 => 6,  71 => 5,  68 => 4,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -360,7 +410,17 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
         return new Source("{% set condition = conditionList.records[0] %}
 {% set mainInfo = mainInfoList.records[0] %}
 {% set partners = partnersList.records %}
+
 <section class=\"condition\">{% component 'localePicker' %}{% component 'localePicker2' %}
+
+{% if activeLocale == 'ru' %}
+    {% set gallery = condition.gallery_ru %}
+    {% set gallery_mobile = condition.gallery_mobile_ru %}
+{% elseif activeLocale == 'en' %}
+    {% set gallery = condition.gallery_en %}
+    {% set gallery_mobile = condition.gallery_mobile_en %}
+{% endif %}
+
 <div class=\"parallax background-tree\" id=\"Paralax__img_condition\">
     <img src=\"{{ 'assets/img/condition_title.png'|theme }}\" alt=\"\" />
     <img src=\"{{ 'assets/img/condition_title_light.png'|theme }}\" alt=\"\" class=\"paraxImgMobil\" />
@@ -380,26 +440,24 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 <div class=\"condition__wrap\">
     <div class=\"cw__title\">
         <p>
-            проект проводится в <a href=\"{{ condition.location }}\">instagram</a>
+            {{ condition.location|replace({'<p>':'','</p>':''})|raw }}
             <a href=\"{{ condition.location }}\" class=\"instHref\" target=\"_blanc\"><img src=\"{{ 'assets/img/condition_inst_title.svg'|theme }}\" alt=\"\"/></a>
         </p>
     </div>
     <div class=\"cw__content__img\">
-        {% for img in condition.gallery %}
+        {% for img in gallery %}
             <img src=\"{{ img.path }}\" alt=\"\" />
         {% endfor %}
     </div>
     <div class=\"cw__content__img__mobil\">
         <div class=\"slider condition_mobil\">
-            {% for img in condition.gallery_mobile %}
-            <img src=\"{{ img.path }}\" alt=\"\" />
-        {% endfor %}
+            {% for img in gallery_mobile %}
+                <img src=\"{{ img.path }}\" alt=\"\" />
+            {% endfor %}
         </div>
     </div>
     <div class=\"cw__rule\">
-        <a href=\"{{ condition.rules.path }}\" target=\"_blank\"><span>ознакомьтесь</span>
-            <p>с общими правилами проекта</p>
-        </a>
+        <a href=\"{{ condition.rules_ru.path }}\" target=\"_blank\">{{ condition.title_document|raw }}</a>
     </div>
     <div class=\"cw__whoInterested\">
         <p class=\"cww__title\">{{ mainInfo.main_title_interest }}</p>
@@ -437,7 +495,11 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 <section class=\"partners\">
     <div class=\"slider partnersSlider\">
         {% for p in partners %}
-            <a href=\"{{ p.url }}\"><img src=\"{{ p.logo_partner.path }}\" alt=\"\" /></a>
+            {% if activeLocale == 'ru' %}
+                <a href=\"{{ p.url }}\"><img src=\"{{ p.logo_partner_ru.path }}\" alt=\"\" /></a>
+            {% elseif activeLocale == 'en' %}
+                <a href=\"{{ p.url }}\"><img src=\"{{ p.logo_partner_en.path }}\" alt=\"\" /></a>
+            {% endif %}
         {% endfor %}
     </div>
     <div class=\"partnersSliderArrow\"></div>
@@ -449,8 +511,8 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 
 <div class=\"title\">
     <div class=\"title__wrap\">
-        <span>призы от</span>
-        <p>партнеров</p>
+        <span>{{ mainInfo.pr_title_1 }}</span>
+        <p>{{ mainInfo.pr_title_2 }}</p>
     </div>
 </div>
 
@@ -460,8 +522,8 @@ class __TwigTemplate_d30ea4ad0e3fe9198d722d676bee53f1309a133f4cc0d5c5dc297678914
 <section class=\"winner {{ (mainInfo.block_winners) == (0) ? mainInfo.block_class : '' }}\">
     <div class=\"title\">
         <div class=\"title__wrap\">
-            <span>победители</span>
-            <p>розыгрыша</p>
+            <span>{{ mainInfo.w_title_1 }}</span>
+            <p>{{ mainInfo.w_title_2 }}</p>
         </div>
     </div>
     {% partial 'winners' %}

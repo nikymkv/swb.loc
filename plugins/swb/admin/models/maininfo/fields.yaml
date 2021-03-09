@@ -92,3 +92,23 @@ tabs:
             span: auto
             type: text
             tab: 'Обратная форма'
+        pr_title_1:
+            label: 'Выделенная часть'
+            span: left
+            type: text
+            tab: 'Призы от партнеров'
+        pr_title_2:
+            label: 'Невыделенная часть'
+            span: right
+            type: text
+            tab: 'Призы от партнеров'
+        w_title_1:
+            label: 'Выделенная часть'
+            span: left
+            type: text
+            tab: Победители
+        w_title_2:
+            label: 'Невыделенная часть'
+            span: right
+            type: text
+            tab: Победители

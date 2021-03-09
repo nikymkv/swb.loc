@@ -3,12 +3,21 @@ fields:
         label: 'Ссылка на партнера'
         span: left
         type: text
-    logo_partner:
-        label: 'Лого партнера'
+    logo_partner_ru:
+        label: 'Лого партнера (ru)'
         mode: image
         useCaption: true
         thumbOptions:
             mode: crop
             extension: auto
         span: left
+        type: fileupload
+    logo_partner_en:
+        label: 'Лого партнера (en)'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
         type: fileupload

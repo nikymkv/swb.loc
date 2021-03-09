@@ -1,4 +1,4 @@
-1615277083a:1:{s:9:"prize.htm";a:6:{s:8:"fileName";s:9:"prize.htm";s:7:"content";s:547:"[builderList giftsList]
+1615296930a:1:{s:9:"prize.htm";a:7:{s:8:"fileName";s:9:"prize.htm";s:7:"content";s:781:"[builderList giftsList]
 modelClass = "Swb\Admin\Models\Gift"
 scope = "-"
 scopeValue = "{{ :scope }}"
@@ -7,21 +7,34 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
+[localePicker]
+forceUrl = 0
 ==
 {% set gifts = giftsList.records %}
+
 <div class="prize__wrap">
     <div class="slider partnersPrizeSlider">
         {% for gift in gifts %}
-            <div><img src="{{ gift.logo_gift.path }}" alt="" /></div>
+            {% if activeLocale == 'ru' %}
+                <div><img src="{{ gift.logo_gift_ru.path }}" alt="" /></div>
+            {% elseif activeLocale == 'en' %}
+                <div><img src="{{ gift.logo_gift_en.path }}" alt="" /></div>
+            {% endif %}
         {% endfor %}
     </div>
     <div class="partnersSliderArrow"></div>
-</div>";s:5:"mtime";i:1615040132;s:6:"markup";s:299:"{% set gifts = giftsList.records %}
+</div>";s:5:"mtime";i:1615285656;s:6:"markup";s:501:"{% set gifts = giftsList.records %}
+
 <div class="prize__wrap">
     <div class="slider partnersPrizeSlider">
         {% for gift in gifts %}
-            <div><img src="{{ gift.logo_gift.path }}" alt="" /></div>
+            {% if activeLocale == 'ru' %}
+                <div><img src="{{ gift.logo_gift_ru.path }}" alt="" /></div>
+            {% elseif activeLocale == 'en' %}
+                <div><img src="{{ gift.logo_gift_en.path }}" alt="" /></div>
+            {% endif %}
         {% endfor %}
     </div>
     <div class="partnersSliderArrow"></div>
-</div>";s:4:"code";N;s:21:"builderList giftsList";a:8:{s:10:"modelClass";s:21:"Swb\Admin\Models\Gift";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+</div>";s:4:"code";N;s:21:"builderList giftsList";a:8:{s:10:"modelClass";s:21:"Swb\Admin\Models\Gift";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}}}

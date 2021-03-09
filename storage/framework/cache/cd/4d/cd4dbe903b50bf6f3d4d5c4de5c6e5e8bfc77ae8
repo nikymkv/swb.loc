@@ -1,4 +1,4 @@
-1615277083a:1:{s:11:"default.htm";a:9:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:6936:"description = "Default layout"
+1615296930a:1:{s:11:"default.htm";a:9:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:7786:"description = "Default layout"
 
 [feedbackform]
 
@@ -77,7 +77,33 @@ pageNumber = "{{ :page }}"
             <a href="{{ s.url }}"><img src="{{ s.logo_social.path }}" alt="" /></a>
           {% endfor %}
         </div>
-        {% component 'feedbackform' %}
+        <form data-request="onSend">
+    <div class="input__wrpBG">
+      <input type="text" name="name" placeholder="{{ mainInfo.form_name }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="email" name="email" placeholder="{{ mainInfo.form_email }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="phone" name="phone" placeholder="{{ mainInfo.form_phone }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="text" name="select" value="{{ mainInfo.form_participant }}" id="select" readonly>
+      <div class="ulSeectWrap">
+        <ul id="optins">
+          <li>{{ mainInfo.form_participant }}</li>
+          <li>{{ mainInfo.form_partner }}</li>  
+        </ul>
+      </div>
+    </div>
+
+    <div class="submit">
+      <input type="submit" value="{{ mainInfo.form_btn }}" class="submitForm"/>
+    </div>
+  </form>
       </div>
       <div class="copyWrite">
         <p>
@@ -209,7 +235,7 @@ pageNumber = "{{ :page }}"
     {% scripts %}
 
   </body>
-</html>";s:5:"mtime";i:1615044361;s:6:"markup";s:6372:"{% set socials = socialList.records %}
+</html>";s:5:"mtime";i:1615295113;s:6:"markup";s:7222:"{% set socials = socialList.records %}
 {% set mainInfo = mainInfoList.records[0] %}
 <!DOCTYPE html>
 <html lang="en">
@@ -264,7 +290,33 @@ pageNumber = "{{ :page }}"
             <a href="{{ s.url }}"><img src="{{ s.logo_social.path }}" alt="" /></a>
           {% endfor %}
         </div>
-        {% component 'feedbackform' %}
+        <form data-request="onSend">
+    <div class="input__wrpBG">
+      <input type="text" name="name" placeholder="{{ mainInfo.form_name }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="email" name="email" placeholder="{{ mainInfo.form_email }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="phone" name="phone" placeholder="{{ mainInfo.form_phone }}" />
+    </div>
+
+    <div class="input__wrpBG">
+      <input type="text" name="select" value="{{ mainInfo.form_participant }}" id="select" readonly>
+      <div class="ulSeectWrap">
+        <ul id="optins">
+          <li>{{ mainInfo.form_participant }}</li>
+          <li>{{ mainInfo.form_partner }}</li>  
+        </ul>
+      </div>
+    </div>
+
+    <div class="submit">
+      <input type="submit" value="{{ mainInfo.form_btn }}" class="submitForm"/>
+    </div>
+  </form>
       </div>
       <div class="copyWrite">
         <p>

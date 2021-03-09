@@ -30,13 +30,13 @@ class __TwigTemplate_e65e9d56755aae0e1dc70f98c722f7a9d3ad6edadda274f14c9027e6206
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array("set" => 1);
-        $filters = array("theme" => 3, "escape" => 23);
+        $filters = array("theme" => 3, "escape" => 18, "raw" => 34, "replace" => 34);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 ['set'],
-                ['theme', 'escape'],
+                ['theme', 'escape', 'raw', 'replace'],
                 []
             );
         } catch (SecurityError $e) {
@@ -110,8 +110,14 @@ class __TwigTemplate_e65e9d56755aae0e1dc70f98c722f7a9d3ad6edadda274f14c9027e6206
 <div class=\"about__draw\">
     <div class=\"ad__wrap\">
         <div class=\"adw__block abw__draw\">
-            <p>розыгрыш</p>
-            <span>призов</span>
+            <p>";
+        // line 18
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "title_1", [], "any", false, false, true, 18), 18, $this->source), "html", null, true);
+        echo "</p>
+            <span>";
+        // line 19
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "title_2", [], "any", false, false, true, 19), 19, $this->source), "html", null, true);
+        echo "</span>
         </div>
         <div class=\"adw__count\">
             <div class=\"adw__block adw__counts\">
@@ -119,9 +125,15 @@ class __TwigTemplate_e65e9d56755aae0e1dc70f98c722f7a9d3ad6edadda274f14c9027e6206
         // line 23
         echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "left_digit", [], "any", false, false, true, 23), 23, $this->source), "html", null, true);
         echo "</p>
-                <span>раз</span>
+                <span>";
+        // line 24
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "label_left", [], "any", false, false, true, 24), 24, $this->source), "html", null, true);
+        echo "</span>
             </div>
-            <span class=\"adw__count__middle\">в</span>
+            <span class=\"adw__count__middle\">";
+        // line 26
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "between", [], "any", false, false, true, 26), 26, $this->source), "html", null, true);
+        echo "</span>
             <div class=\"adw__block adw__month\">
                 <p>";
         // line 28
@@ -129,16 +141,19 @@ class __TwigTemplate_e65e9d56755aae0e1dc70f98c722f7a9d3ad6edadda274f14c9027e6206
         echo "</p>
                 <span>";
         // line 29
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["месяца"] ?? null), 29, $this->source), "html", null, true);
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "label_right", [], "any", false, false, true, 29), 29, $this->source), "html", null, true);
         echo "</span>
             </div>
         </div>
         <div class=\"adw__block adw__live\">
-            <p>в прямом эфире</p>
-            <span>с помощью сервиса <a href=\"";
+            <p>";
+        // line 33
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "location_1", [], "any", false, false, true, 33), 33, $this->source), "html", null, true);
+        echo "</p>
+            <span>";
         // line 34
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "url_random", [], "any", false, false, true, 34), 34, $this->source), "html", null, true);
-        echo "\">рандомайзер</a></span>
+        echo twig_replace_filter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["about"] ?? null), "location_2", [], "any", false, false, true, 34), 34, $this->source), ["<p>" => "", "</p>" => ""]);
+        echo "</span>
         </div>
     </div>
     <div class=\"ad__draw__right\">
@@ -168,7 +183,7 @@ class __TwigTemplate_e65e9d56755aae0e1dc70f98c722f7a9d3ad6edadda274f14c9027e6206
 
     public function getDebugInfo()
     {
-        return array (  152 => 40,  148 => 39,  140 => 34,  132 => 29,  128 => 28,  120 => 23,  107 => 13,  103 => 12,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  71 => 4,  67 => 3,  64 => 2,  62 => 1,);
+        return array (  167 => 40,  163 => 39,  155 => 34,  151 => 33,  144 => 29,  140 => 28,  135 => 26,  130 => 24,  126 => 23,  119 => 19,  115 => 18,  107 => 13,  103 => 12,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  71 => 4,  67 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -190,23 +205,23 @@ class __TwigTemplate_e65e9d56755aae0e1dc70f98c722f7a9d3ad6edadda274f14c9027e6206
 <div class=\"about__draw\">
     <div class=\"ad__wrap\">
         <div class=\"adw__block abw__draw\">
-            <p>розыгрыш</p>
-            <span>призов</span>
+            <p>{{ about.title_1 }}</p>
+            <span>{{ about.title_2 }}</span>
         </div>
         <div class=\"adw__count\">
             <div class=\"adw__block adw__counts\">
                 <p>{{ about.left_digit }}</p>
-                <span>раз</span>
+                <span>{{ about.label_left }}</span>
             </div>
-            <span class=\"adw__count__middle\">в</span>
+            <span class=\"adw__count__middle\">{{ about.between }}</span>
             <div class=\"adw__block adw__month\">
                 <p>{{ about.right_digit }}</p>
-                <span>{{месяца}}</span>
+                <span>{{ about.label_right }}</span>
             </div>
         </div>
         <div class=\"adw__block adw__live\">
-            <p>в прямом эфире</p>
-            <span>с помощью сервиса <a href=\"{{ about.url_random }}\">рандомайзер</a></span>
+            <p>{{ about.location_1 }}</p>
+            <span>{{ about.location_2|replace({'<p>':'','</p>':''})|raw }}</span>
         </div>
     </div>
     <div class=\"ad__draw__right\">

@@ -21,9 +21,31 @@ class About extends Model
      */
     public $table = 'swb_admin_about';
 
+    public $translatable = [
+        'title_1',
+        'title_2',
+        'label_left',
+        'label_right',
+        'location_1',
+        'location_2',
+        'text_duration',
+        'between',
+    ];
     /**
      * @var array Validation rules
      */
     public $rules = [
     ];
+
+    public static function boot()
+    {
+        parent::boot();
+    
+        if (!class_exists('RainLab\Translate\Behaviors\TranslatableModel'))
+            return;
+    
+        self::extend(function($model){
+            $model->implement[] = 'RainLab.Translate.Behaviors.TranslatableModel';
+        });
+    }
 }

@@ -29,13 +29,13 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 1, "styles" => 16, "partial" => 20, "page" => 23, "for" => 52, "component" => 56, "framework" => 184, "scripts" => 185);
+        $tags = array("set" => 1, "styles" => 16, "partial" => 20, "page" => 23, "for" => 52, "framework" => 210, "scripts" => 211);
         $filters = array("theme" => 10, "escape" => 49);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'styles', 'partial', 'page', 'for', 'component', 'framework', 'scripts'],
+                ['set', 'styles', 'partial', 'page', 'for', 'framework', 'scripts'],
                 ['theme', 'escape'],
                 []
             );
@@ -205,13 +205,55 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 55
         echo "        </div>
-        ";
-        // line 56
-        $context['__cms_component_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("feedbackform"        , $context['__cms_component_params']        );
-        unset($context['__cms_component_params']);
-        // line 57
-        echo "      </div>
+        <form data-request=\"onSend\">
+    <div class=\"input__wrpBG\">
+      <input type=\"text\" name=\"name\" placeholder=\"";
+        // line 58
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "form_name", [], "any", false, false, true, 58), 58, $this->source), "html", null, true);
+        echo "\" />
+    </div>
+
+    <div class=\"input__wrpBG\">
+      <input type=\"email\" name=\"email\" placeholder=\"";
+        // line 62
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "form_email", [], "any", false, false, true, 62), 62, $this->source), "html", null, true);
+        echo "\" />
+    </div>
+
+    <div class=\"input__wrpBG\">
+      <input type=\"phone\" name=\"phone\" placeholder=\"";
+        // line 66
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "form_phone", [], "any", false, false, true, 66), 66, $this->source), "html", null, true);
+        echo "\" />
+    </div>
+
+    <div class=\"input__wrpBG\">
+      <input type=\"text\" name=\"select\" value=\"";
+        // line 70
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "form_participant", [], "any", false, false, true, 70), 70, $this->source), "html", null, true);
+        echo "\" id=\"select\" readonly>
+      <div class=\"ulSeectWrap\">
+        <ul id=\"optins\">
+          <li>";
+        // line 73
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "form_participant", [], "any", false, false, true, 73), 73, $this->source), "html", null, true);
+        echo "</li>
+          <li>";
+        // line 74
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "form_partner", [], "any", false, false, true, 74), 74, $this->source), "html", null, true);
+        echo "</li>  
+        </ul>
+      </div>
+    </div>
+
+    <div class=\"submit\">
+      <input type=\"submit\" value=\"";
+        // line 80
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["mainInfo"] ?? null), "form_btn", [], "any", false, false, true, 80), 80, $this->source), "html", null, true);
+        echo "\" class=\"submitForm\"/>
+    </div>
+  </form>
+      </div>
       <div class=\"copyWrite\">
         <p>
           © 2021 <a href=\"https://itd.company/\" target=\"_blank\">ITD Company</a>.
@@ -222,7 +264,7 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
 
     <div class=\"scrollUP\">
       <img src=\"";
-        // line 67
+        // line 93
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/arrUP.svg");
         echo "\" alt=\"\" />
     </div>
@@ -246,12 +288,12 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
         swipe: false,
         prevArrow:
           \"<button id='prev' type='button' class='btn btnPrev'><img src='";
-        // line 88
+        // line 114
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partnersArrLeft.svg");
         echo "' alt=''></button>\",
         nextArrow:
           \"<button id='next' type='button' class='btn btnNext'><img src='";
-        // line 90
+        // line 116
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partnersArrRight.svg");
         echo "' alt=''></button>\",
         responsive: [
@@ -281,12 +323,12 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
         swipe: false,
         prevArrow:
           \"<button id='prev' type='button' class='btn btnPrev'><img src='";
-        // line 117
+        // line 143
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partnersArrLeft.svg");
         echo "' alt=''></button>\",
         nextArrow:
           \"<button id='next' type='button' class='btn btnNext'><img src='";
-        // line 119
+        // line 145
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partnersArrRight.svg");
         echo "' alt=''></button>\",
 
@@ -320,13 +362,13 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
         swipe: false,
         prevArrow:
           \"<button id='prev' type='button' class='btn btnPrev'><img src='";
-        // line 150
+        // line 176
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partnersArrLeft.svg");
         echo "' alt=''></button>\",
 
         nextArrow:
           \"<button id='next' type='button' class='btn btnNext'><img src='";
-        // line 153
+        // line 179
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/partnersArrRight.svg");
         echo "' alt=''></button>\",
         responsive: [
@@ -359,11 +401,11 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
       });
     </script>
     <script src=\"";
-        // line 183
+        // line 209
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/script.js");
         echo "\"></script>
     ";
-        // line 184
+        // line 210
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -374,11 +416,11 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 185
+        // line 211
         echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 186
+        // line 212
         echo "
   </body>
 </html>";
@@ -396,7 +438,7 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
 
     public function getDebugInfo()
     {
-        return array (  382 => 186,  378 => 185,  367 => 184,  363 => 183,  330 => 153,  324 => 150,  290 => 119,  285 => 117,  255 => 90,  250 => 88,  226 => 67,  214 => 57,  210 => 56,  207 => 55,  196 => 53,  192 => 52,  186 => 49,  179 => 45,  175 => 44,  171 => 43,  167 => 42,  163 => 41,  159 => 40,  155 => 39,  151 => 38,  147 => 37,  143 => 36,  139 => 35,  135 => 34,  131 => 33,  127 => 32,  123 => 31,  119 => 30,  115 => 29,  111 => 28,  107 => 27,  102 => 24,  100 => 23,  96 => 21,  92 => 20,  87 => 17,  84 => 16,  75 => 10,  66 => 3,  64 => 2,  62 => 1,);
+        return array (  424 => 212,  420 => 211,  409 => 210,  405 => 209,  372 => 179,  366 => 176,  332 => 145,  327 => 143,  297 => 116,  292 => 114,  268 => 93,  252 => 80,  243 => 74,  239 => 73,  233 => 70,  226 => 66,  219 => 62,  212 => 58,  207 => 55,  196 => 53,  192 => 52,  186 => 49,  179 => 45,  175 => 44,  171 => 43,  167 => 42,  163 => 41,  159 => 40,  155 => 39,  151 => 38,  147 => 37,  143 => 36,  139 => 35,  135 => 34,  131 => 33,  127 => 32,  123 => 31,  119 => 30,  115 => 29,  111 => 28,  107 => 27,  102 => 24,  100 => 23,  96 => 21,  92 => 20,  87 => 17,  84 => 16,  75 => 10,  66 => 3,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -456,7 +498,33 @@ class __TwigTemplate_99269f7a79d33de8d8c52c7fc8eccb16ebd0a0efe6e4e8bb2e3cd9eeafa
             <a href=\"{{ s.url }}\"><img src=\"{{ s.logo_social.path }}\" alt=\"\" /></a>
           {% endfor %}
         </div>
-        {% component 'feedbackform' %}
+        <form data-request=\"onSend\">
+    <div class=\"input__wrpBG\">
+      <input type=\"text\" name=\"name\" placeholder=\"{{ mainInfo.form_name }}\" />
+    </div>
+
+    <div class=\"input__wrpBG\">
+      <input type=\"email\" name=\"email\" placeholder=\"{{ mainInfo.form_email }}\" />
+    </div>
+
+    <div class=\"input__wrpBG\">
+      <input type=\"phone\" name=\"phone\" placeholder=\"{{ mainInfo.form_phone }}\" />
+    </div>
+
+    <div class=\"input__wrpBG\">
+      <input type=\"text\" name=\"select\" value=\"{{ mainInfo.form_participant }}\" id=\"select\" readonly>
+      <div class=\"ulSeectWrap\">
+        <ul id=\"optins\">
+          <li>{{ mainInfo.form_participant }}</li>
+          <li>{{ mainInfo.form_partner }}</li>  
+        </ul>
+      </div>
+    </div>
+
+    <div class=\"submit\">
+      <input type=\"submit\" value=\"{{ mainInfo.form_btn }}\" class=\"submitForm\"/>
+    </div>
+  </form>
       </div>
       <div class=\"copyWrite\">
         <p>

@@ -28,6 +28,7 @@ class Partner extends Model
     ];
     
     public $attachOne = [
-        'logo_partner' => 'System\Models\File'
+        'logo_partner_ru' => 'System\Models\File',
+        'logo_partner_en' => 'System\Models\File'
     ];
 }

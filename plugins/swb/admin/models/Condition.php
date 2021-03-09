@@ -21,6 +21,11 @@ class Condition extends Model
      */
     public $table = 'swb_admin_condition';
 
+    public $translatable = [
+        'title_document',
+        'location',
+    ];
+
     /**
      * @var array Validation rules
      */
@@ -28,11 +33,26 @@ class Condition extends Model
     ];
 
     public $attachOne = [
-        'rules' => 'System\Models\File',
+        'rules_ru' => 'System\Models\File',
+        'rules_en' => 'System\Models\File',
     ];
 
     public $attachMany = [
-        'gallery' => 'System\Models\File',
-        'gallery_mobile' => 'System\Models\File'
+        'gallery_ru' => 'System\Models\File',
+        'gallery_mobile_ru' => 'System\Models\File',
+        'gallery_en' => 'System\Models\File',
+        'gallery_mobile_en' => 'System\Models\File'
     ];
+
+    public static function boot()
+    {
+        parent::boot();
+    
+        if (!class_exists('RainLab\Translate\Behaviors\TranslatableModel'))
+            return;
+    
+        self::extend(function($model){
+            $model->implement[] = 'RainLab.Translate.Behaviors.TranslatableModel';
+        });
+    }
 }
