@@ -1,0 +1,14 @@
+fields:
+    url:
+        label: 'Ссылка на партнера'
+        span: left
+        type: text
+    logo_partner:
+        label: 'Лого партнера'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload

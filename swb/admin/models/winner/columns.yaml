@@ -1,0 +1,10 @@
+columns:
+    nickname:
+        label: Никнейм
+        type: text
+    url_winner:
+        label: 'Ссылка на победителя'
+        type: text
+    by_give:
+        label: 'Приз от'
+        type: text

@@ -1,0 +1,21 @@
+fields:
+    left_digit:
+        label: 'Цифра слева'
+        span: left
+        type: number
+    right_digit:
+        label: 'Цифра справа'
+        span: right
+        type: number
+    duration:
+        label: Продолжительность
+        span: auto
+        type: number
+    text_duration:
+        label: Месяц/год
+        span: right
+        type: text
+    url_random:
+        label: 'URL на рандомайзер'
+        span: auto
+        type: text

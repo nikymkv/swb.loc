@@ -1,0 +1,13 @@
+columns:
+    left_digit:
+        label: 'Цифра слева'
+        type: number
+    right_digit:
+        label: 'Цифра справа'
+        type: number
+    duration:
+        label: Продолжительность
+        type: number
+    text_duration:
+        label: Месяц/год
+        type: text

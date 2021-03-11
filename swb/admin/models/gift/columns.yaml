@@ -1,0 +1,7 @@
+columns:
+    title:
+        label: Заголовок
+        type: text
+    desc:
+        label: Описание
+        type: text

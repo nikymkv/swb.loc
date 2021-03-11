@@ -1,0 +1,11 @@
+name: GiftController
+modelClass: Swb\Admin\Models\Gift
+form: $/swb/admin/models/gift/fields.yaml
+defaultRedirect: swb/admin/giftcontroller
+create:
+    redirect: 'swb/admin/giftcontroller/update/:id'
+    redirectClose: swb/admin/giftcontroller
+update:
+    redirect: swb/admin/giftcontroller
+    redirectClose: swb/admin/giftcontroller
+preview: {  }

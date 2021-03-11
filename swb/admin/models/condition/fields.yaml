@@ -1,0 +1,42 @@
+tabs:
+    fields:
+        location:
+            label: 'Ссылка на Instagram'
+            span: auto
+            type: text
+            tab: 'Место проведения'
+        gallery:
+            label: 'Загрузить изображения условий'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: left
+            type: fileupload
+            tab: Условия
+        gallery_mobile:
+            label: 'Загрузить изображения условий (мобилка)'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: right
+            type: fileupload
+            tab: Условия
+        title_document:
+            label: Подпись
+            span: left
+            type: text
+            tab: Правила
+        rules:
+            label: 'Правила проведения'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: right
+            type: fileupload
+            tab: Правила

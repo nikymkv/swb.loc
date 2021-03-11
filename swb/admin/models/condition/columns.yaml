@@ -1,0 +1,4 @@
+columns:
+    location:
+        label: 'Место проведения'
+        type: text

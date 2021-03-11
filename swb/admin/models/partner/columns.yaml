@@ -1,0 +1,4 @@
+columns:
+    url:
+        label: 'Ссылка на партнера'
+        type: text

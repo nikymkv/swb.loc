@@ -1,0 +1,11 @@
+name: PartnerController
+modelClass: Swb\Admin\Models\Partner
+form: $/swb/admin/models/partner/fields.yaml
+defaultRedirect: swb/admin/partnercontroller
+create:
+    redirect: 'swb/admin/partnercontroller/update/:id'
+    redirectClose: swb/admin/partnercontroller
+update:
+    redirect: swb/admin/partnercontroller
+    redirectClose: swb/admin/partnercontroller
+preview: {  }

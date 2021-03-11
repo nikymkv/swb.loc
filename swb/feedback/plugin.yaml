@@ -1,0 +1,6 @@
+plugin:
+    name: 'swb.feedback::lang.plugin.name'
+    description: 'swb.feedback::lang.plugin.description'
+    author: swb
+    icon: oc-icon-phone
+    homepage: ''

@@ -1,0 +1,13 @@
+columns:
+    quote:
+        label: Цитата
+        type: text
+    quote_author:
+        label: 'Автор цитаты'
+        type: text
+    interesting_title1:
+        label: 'Заголовок левой записи'
+        type: text
+    interesting_title2:
+        label: 'Заголовок правой записи'
+        type: text

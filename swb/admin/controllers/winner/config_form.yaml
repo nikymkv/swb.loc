@@ -1,0 +1,11 @@
+name: Winner
+modelClass: Swb\Admin\Models\Winner
+form: $/swb/admin/models/winner/fields.yaml
+defaultRedirect: swb/admin/winner
+create:
+    redirect: 'swb/admin/winner/update/:id'
+    redirectClose: swb/admin/winner
+update:
+    redirect: swb/admin/winner
+    redirectClose: swb/admin/winner
+preview: {  }
